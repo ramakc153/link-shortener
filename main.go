@@ -8,7 +8,7 @@ import (
 func main() {
 	http.HandleFunc("/", Redirect)
 	http.HandleFunc("/shorted", Add_data)
-	addr := ":80"
+	addr := ":3001"
 	fmt.Println("Server served on ", addr)
 	if err := http.ListenAndServe(addr, nil); err != nil {
 		panic(err)
